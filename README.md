@@ -4,8 +4,13 @@
 ## Using Jib
 
 ### Using inline commands
+For Jar Packaging
 ```
 mvn compile com.google.cloud.tools:jib-maven-plugin:3.3.1:build -Djib.to.auth.username=<USERNAME>  -Djib.to.auth.password=<PASSWORD/TOKEN> -Dimage=<IMAGE_NAME>
+```
+For WAR Packaging
+```
+mvn package com.google.cloud.tools:jib-maven-plugin:3.3.1:build -Djib.to.auth.username=<USERNAME>  -Djib.to.auth.password=<PASSWORD/TOKEN> -Dimage=<IMAGE_NAME>
 ```
 
 ### Using Plugins in POM file
@@ -43,3 +48,4 @@ mvn compile com.google.cloud.tools:jib-maven-plugin:3.3.1:build -Djib.to.auth.us
 - https://maven.apache.org/
 - https://maven.apache.org/pom.html
 - https://maven.apache.org/settings.html
+- https://github.com/GoogleContainerTools/jib/issues/3214
