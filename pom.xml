@@ -3,13 +3,13 @@
 	<groupId>com.devopsmadeeasy</groupId>
 	<artifactId>devopsmadeeasy</artifactId>
 	<packaging>war</packaging>
-	<version>2.89-SNAPSHOT</version>
+	<version>1.0</version>
 
 	<name>devops</name>
 	<description>Maven Web App for Java Projects</description>
 	<organization>
 		<name>devopsmadeeasy</name>
-		<url>https://devopsmadeeasy.com</url>
+		<url>https://www.devopsmadeeasy.in</url>
 	</organization>
 
 	<properties>
@@ -17,13 +17,6 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<nexus.host.url>http://65.0.61.220:8081</nexus.host.url>
-		<tomcat.host.url>http://3.109.186.189:8080</tomcat.host.url>
-		<sonar.host.url>http://0.0.0.0:9000</sonar.host.url>
-		<sonar.login>YOUR-TOKEN-GOES-HERE</sonar.login>
-		<!--
-		<sonar.login>USERNAME</sonar.login>
-		<sonar.password>PASSWORD</sonar.password> -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
@@ -84,25 +77,6 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	<repositories>
-	    <repository>
-	      <id>nexus</id>
-	      <url>${nexus.host.url}/repository/maven-internal-group/</url>
-	    </repository>
-	</repositories>
-	<distributionManagement>
-		<repository>
-			<id>nexus</id>
-			<name>Nexus Release Repository</name>
-			<url>${nexus.host.url}/repository/maven-hosted-release/</url>
-		</repository>
-		<snapshotRepository>
-			<id>nexus</id>
-			<name>Nexus Snapshot Repository</name>
-			<url>${nexus.host.url}/repository/maven-hosted-snapshot/</url>
-		</snapshotRepository>
-	</distributionManagement>  
-
 	<build>
 		<finalName>employee-application</finalName>
 		<plugins>
@@ -116,10 +90,10 @@
 				</configuration>
 			</plugin>
 			<plugin>
-                		<groupId>org.sonarsource.scanner.maven</groupId>
-                		<artifactId>sonar-maven-plugin</artifactId>
-                		<version>3.8.0.2131</version>
-            		</plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.8.0.2131</version>
+            </plugin>
 			<plugin>
 				<groupId>org.eclipse.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
